@@ -1,7 +1,7 @@
 aws_region   = "us-east-1"
 id_user_pools = "us-east-1_v8GEEKleP"
 client_id = "213abdee70ectia5lukf0hbtpd"
-function_name = "lambda-auth"
+function_name = "lambda-authorizer"
 handler = "lambda-authorizer.lambda_handler" # O nome do arquivo e da função de manipulador
 runtime = "python3.8"                 
 memory_size = 128 # Tamanho da memória em MB
