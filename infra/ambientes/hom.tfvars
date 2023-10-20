@@ -1,0 +1,10 @@
+aws_region   = "us-east-1"
+id_user_pools = "us-east-1_UfLoFoZx3"
+client_id = "426unom64o0im2huip3nfaajek"
+function_name = "lambda-auth"
+handler = "lambda-authorizer.lambda_handler" # O nome do arquivo e da função de manipulador
+runtime = "python3.8"                 
+memory_size = 128 # Tamanho da memória em MB
+timeout = 5 # Tempo limite da função em segundos
+id_conta = "231670762225"
+secret_key_jwt = "secret-jwt"
