@@ -16,8 +16,8 @@ resource "aws_iam_role" "lambda_authorizer" {
 }
 
 
-resource "aws_iam_policy" "lambda_cognito_policy" {
-  name        = "lambda-cognito-policy"
+resource "aws_iam_policy" "lambda_authorizer_policy" {
+  name        = "lambda_authorizer_policy"
   description = "Permissões para Lambda acessar Cognito User Pool"
 
   policy = jsonencode({
@@ -38,7 +38,7 @@ resource "aws_iam_policy" "lambda_cognito_policy" {
   })
 }
 
-resource "aws_iam_role_policy_attachment" "lambda_cognito_attachment" {
-  policy_arn = aws_iam_policy.lambda_cognito_policy.arn
+resource "aws_iam_role_policy_attachment" "lambda_authorizer_attachment" {
+  policy_arn = aws_iam_policy.lambda_authorizer_policy.arn
   role       = aws_iam_role.lambda_authorizer.name
 }
