@@ -19,3 +19,10 @@ resource "aws_lambda_function" "lambda_authorizer" {
   }
 }
 
+resource "aws_lambda_permission" "api_gtw_invoke" {
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = var.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn = "*"
+}
