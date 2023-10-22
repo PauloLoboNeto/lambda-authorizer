@@ -1,2 +1,2 @@
 jwt
-CognitoJwtVerifier
+aws_jwt_verify
